@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Civil Engineering Calculations</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="../images/logo.png" alt="Civil Engineering Calculations Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showSection('home')">Home</a></li>
+                    <!-- Highlighted: Dropdown for Structure -->
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Structure</a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="showSection('beam-calculator')">Beam Calculator</a>
+                            <a href="#" onclick="showSection('column-calculator')">Column Calculator</a>
+                            <a href="#" onclick="showSection('slab-calculator')">Slab Calculator</a>
+                            <a href="#" onclick="showSection('foundation-calculator')">Foundation Calculator</a>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="showSection('material-properties')">Material Properties</a></li>
+                    <li><a href="#" onclick="showSection('guidelines')">Guidelines</a></li>
+                    <li><a href="#" onclick="showSection('contact-us')">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="content-section">
+            <h1>Welcome to Civil Engineering Calculations</h1>
+            <p>Introduction and overview of the website, explaining its purpose and the types of calculations available.</p>
+        </section>
+        <!-- Other sections remain unchanged -->
+        <section id="beam-calculator" class="content-section" style="display:none;">
+            <h2>Beam Calculator</h2>
+            <h3>Rebar Calculation</h3>
+            <form id="beamForm">
+                <label for="beamWidth">Width of Beam (mm):</label>
+                <input type="number" id="beamWidth" name="beamWidth" required><br><br>
+                <label for="beamHeight">Height of Beam (mm):</label>
+                <input type="number" id="beamHeight" name="beamHeight" required><br><br>
+                <label for="bendingMoment">Maximum Bending Moment (kNm):</label>
+                <input type="number" id="bendingMoment" name="bendingMoment" required><br><br>
+                <label for="concreteStrength">Strength of Concrete (MPa):</label>
+                <input type="number" id="concreteStrength" name="concreteStrength" required><br><br>
+                <label for="rebarStrength">Strength of Rebar (MPa):</label>
+                <input type="number" id="rebarStrength" name="rebarStrength" required><br><br>
+                <label for="cover">Cover (mm):</label>
+                <input type="number" id="cover" name="cover" required><br><br>
+                <label for="spanLength">Span Length (m):</label>
+                <input type="number" id="spanLength" name="spanLength" required><br><br>
+                <button type="button" onclick="calculateRebar()">Calculate Required Rebar</button>
+            </form>
+            <p id="rebarResult"></p>
+        </section>
+        <section id="column-calculator" class="content-section" style="display:none;">
+            <h2>Column Calculator</h2>
+            <h3>Rebar Calculation</h3>
+            <p>Determine the necessary rebar for columns based on axial load, column size, and material properties.</p>
+            <h3>Load Bearing Capacity</h3>
+            <p>Calculate the load-bearing capacity of columns.</p>
+        </section>
+        <section id="slab-calculator" class="content-section" style="display:none;">
+            <h2>Slab Calculator</h2>
+            <h3>Rebar Calculation</h3>
+            <p>Calculate the required rebar for slabs based on loading conditions and slab dimensions.</p>
+            <h3>Load Distribution</h3>
+            <p>Analyze the load distribution on slabs.</p>
+        </section>
+        <section id="foundation-calculator" class="content-section" style="display:none;">
+            <h2>Foundation Calculator</h2>
+            <h3>Footing Design</h3>
+            <p>Design footings based on column loads and soil conditions.</p>
+            <h3>Settlement Calculation</h3>
+            <p>Assess the potential settlement of foundations.</p>
+        </section>
+        <!-- Other sections remain unchanged -->
+    </main>
+    <!-- Reference to the external JavaScript file -->
+    <script src="../scripts/scripts.js"></script>
+</body>
+</html>
